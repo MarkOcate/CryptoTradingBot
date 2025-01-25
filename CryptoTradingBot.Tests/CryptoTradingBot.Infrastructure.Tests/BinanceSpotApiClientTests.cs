@@ -3,6 +3,8 @@ using Moq.Protected;
 using Moq;
 using System.Net;
 using CryptoTradingBot.Infrastructure.Binance;
+using CryptoTradingBot.Core.Models;
+using Newtonsoft.Json;
 
 namespace CryptoTradingBot.Infrastructure.Tests.Binance.Clients
 {
@@ -10,13 +12,88 @@ namespace CryptoTradingBot.Infrastructure.Tests.Binance.Clients
     {
         private readonly Mock<HttpMessageHandler> _httpMessageHandlerMock;
         private readonly HttpClient _httpClient;
-        private readonly BinanceSpotApiClient _apiClient;
+        private readonly MarketDataClient _apiClient;
 
         public BinanceSpotApiClientTests()
         {
             _httpMessageHandlerMock = new Mock<HttpMessageHandler>();
             _httpClient = new HttpClient(_httpMessageHandlerMock.Object);
-            _apiClient = new BinanceSpotApiClient(_httpClient, BinanceApiConfig.LoadConfiguration("Test"));
+            _apiClient = new MarketDataClient(_httpClient, BinanceApiConfig.LoadConfiguration("Test"));
+        }
+
+        [Fact]
+        public async Task PingAsync_ShouldReturnSuccess()
+        {
+            // Arrange
+            var response = new HttpResponseMessage(HttpStatusCode.OK);
+            _httpMessageHandlerMock.Protected()
+                .Setup<Task<HttpResponseMessage>>(
+                    "SendAsync",
+                    ItExpr.IsAny<HttpRequestMessage>(),
+                    ItExpr.IsAny<CancellationToken>()
+                )
+                .ReturnsAsync(response);
+
+            // Act
+            var result = await _apiClient.PingAsync();
+
+            // Assert
+            Assert.True(result);
+        }
+
+        [Fact]
+        public async Task GetServerTimeAsync_ShouldReturnServerTime()
+        {
+            // Arrange
+            var jsonResponse = "{\"serverTime\": 1625812800000}";
+            var response = new HttpResponseMessage(HttpStatusCode.OK)
+            {
+                Content = new StringContent(jsonResponse)
+            };
+            _httpMessageHandlerMock.Protected()
+                .Setup<Task<HttpResponseMessage>>(
+                    "SendAsync",
+                    ItExpr.IsAny<HttpRequestMessage>(),
+                    ItExpr.IsAny<CancellationToken>()
+                )
+                .ReturnsAsync(response);
+
+            // Act
+            var serverTime = await _apiClient.GetServerTimeAsync();
+
+            // Assert
+            var expected = Convert.ToDateTime(1625812800000);
+            Assert.Equal(expected, serverTime);
+        }
+
+        [Fact]
+        public async Task GetExchangeInfoAsync_ShouldReturnExchangeInfo()
+        {
+            /*
+            // Arrange
+            var jsonResponse = "{ \"timezone\": \"UTC\", \"serverTime\": 1625812800000, \"rateLimits\": [], \"symbols\": [] }";
+            //return JsonConvert.DeserializeObject<ExchangeInfo>(jsonResponse);
+
+            var response = new HttpResponseMessage(HttpStatusCode.OK)
+            {
+                Content = new StringContent(jsonResponse)
+            };
+            _httpMessageHandlerMock.Protected()
+                .Setup<Task<HttpResponseMessage>>(
+                    "SendAsync",
+                    ItExpr.IsAny<HttpRequestMessage>(),
+                    ItExpr.IsAny<CancellationToken>()
+                )
+                .ReturnsAsync(response);
+
+            // Act
+            var exchangeInfo = await _apiClient.GetExchangeInfoAsync();
+
+            // Assert
+            Assert.NotNull(exchangeInfo);
+            Assert.Equal("UTC", exchangeInfo.Timezone);
+            Assert.Equal(1625812800000, exchangeInfo.ServerTime);
+            */
         }
 
         [Fact]

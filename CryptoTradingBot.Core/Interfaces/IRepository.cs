@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CryptoTradingBot.Infrastructure.Interfaces
+namespace CryptoTradingBot.Core.Interfaces
 {
     public interface IRepository<T>
     {

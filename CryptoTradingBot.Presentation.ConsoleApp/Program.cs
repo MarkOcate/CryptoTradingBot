@@ -1,5 +1,4 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using CryptoTradingBot.Infrastructure.DI;
 using CryptoTradingBot.Core.Interfaces;
 using CryptoTradingBot.Infrastructure.Binance.Services;
 
@@ -9,6 +8,7 @@ namespace CryptoTradingBot.ConsoleApp
     {
         static void Main(string[] args)
         {
+            /*
             // Build the DI container
             var serviceProvider = new ServiceCollection()
                 .RegisterServices()
@@ -36,6 +36,7 @@ namespace CryptoTradingBot.ConsoleApp
             {
                 Console.WriteLine("Configuration service not available.");
             }
+            */
 
             // Your main application logic here
             Console.WriteLine("Press any key to exit...");

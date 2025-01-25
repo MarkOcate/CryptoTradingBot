@@ -5,13 +5,11 @@ using CryptoTradingBot.Infrastructure.Database.Repositories;
 using CryptoTradingBot.Infrastructure.Database.Services;
 using CryptoTradingBot.Infrastructure.Binance.Services;
 using CryptoTradingBot.Infrastructure.Binance.Clients;
-using CryptoTradingBot.Infrastructure.Binance.Interfaces;
-using CryptoTradingBot.Infrastructure.Interfaces;
-using CryptoTradingBot.Application.Services;
 using CryptoTradingBot.Core.Models;
+using CryptoTradingBot.Application.Services;
 
 
-namespace CryptoTradingBot.Infrastructure.DI
+namespace CryptoTradingBot.Application
 {
     public static class ServiceRegistry
     {
@@ -26,8 +24,11 @@ namespace CryptoTradingBot.Infrastructure.DI
 
             // Register configuration service
             services.AddSingleton<BinanceConfigurationService>();
-            services.AddHttpClient<IBinanceApiClient, BinanceSpotApiClient>();
-            services.AddHttpClient<IBinanceMarketDataClient, BinanceMarketDataClient>();
+            //services.AddHttpClient<IBinanceApiClient, BinanceSpotApiClient>();
+            services.AddHttpClient<IMarketDataClient, MarketDataClient>();
+            services.AddHttpClient<IAccountClient, AccountClient>();
+            services.AddHttpClient<ITradingClient, TradingClient>();
+            services.AddHttpClient<IUserDataStreamClient, UserDataStreamClient>();
 
             services.AddTransient<MarketDataService>();
 

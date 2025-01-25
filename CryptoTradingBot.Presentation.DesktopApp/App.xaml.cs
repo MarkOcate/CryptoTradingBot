@@ -1,7 +1,6 @@
 ﻿using CryptoTradingBot.Core.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
 using System.Windows;
-using CryptoTradingBot.Infrastructure.DI;
 using CryptoTradingBot.Infrastructure.Binance.Services;
 using CryptoTradingBot.App.DesktopApp;
 
@@ -16,10 +15,12 @@ namespace CryptoTradingBot.Presentation.DesktopApp
 
         public App()
         {
+            /*
             // Build the DI container
             ServiceProvider = new ServiceCollection()
                 .RegisterServices()  // Register services using your ServiceRegistry
                 .BuildServiceProvider();
+            */
         }
 
         protected override void OnStartup(StartupEventArgs e)

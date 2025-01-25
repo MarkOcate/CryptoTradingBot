@@ -1,25 +1,14 @@
-﻿using Binance.Net.Enums;
-using CryptoExchange.Net.CommonObjects;
-using CryptoExchange.Net.Interfaces;
-using CryptoTradingBot.Infrastructure.Binance.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Net.NetworkInformation;
-using System.Reflection.Metadata;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Linq;
+﻿using CryptoTradingBot.Core.Interfaces;
+using CryptoTradingBot.Core.Models;
 
 namespace CryptoTradingBot.Infrastructure.Binance.Clients
 {
-    public abstract class BinanceApiClientBase : IBinanceApiClient
+    public abstract class ApiClientBase : IBinanceApiClient
     {
         protected readonly HttpClient _httpClient;
         protected readonly BinanceApiConfig _config;
 
-        public BinanceApiClientBase(HttpClient httpClient, BinanceApiConfig config)
+        public ApiClientBase(HttpClient httpClient, BinanceApiConfig config)
         {
             _httpClient = httpClient;
             _config = config;
