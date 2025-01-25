@@ -1,0 +1,74 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CryptoTradingBot.Infrastructure", "CryptoTradingBot.Infrastructure\CryptoTradingBot.Infrastructure.csproj", "{31CCAD79-51C5-41CD-B024-08423CBE924F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CryptoTradingBot.Core", "CryptoTradingBot.Core\CryptoTradingBot.Core.csproj", "{7ADE8620-CB7F-4A23-A943-F8C6A9E3AA59}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CryptoTradingBot.Tests", "CryptoTradingBot.Tests", "{95CE56B1-21FF-4102-82FA-ABD1EA932935}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CryptoTradingBot.Application.Tests", "CryptoTradingBot.Tests\CryptoTradingBot.Application.Tests\CryptoTradingBot.Application.Tests.csproj", "{78ADFF8C-9EA8-4CB3-B070-7182C890BBCB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CryptoTradingBot.Core.Tests", "CryptoTradingBot.Tests\CryptoTradingBot.Core.Tests\CryptoTradingBot.Core.Tests.csproj", "{1E34B093-239E-4D38-93F1-BA9D7993E828}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CryptoTradingBot.Infrastructure.Tests", "CryptoTradingBot.Tests\CryptoTradingBot.Infrastructure.Tests\CryptoTradingBot.Infrastructure.Tests.csproj", "{F58A9F80-7773-4B6B-85AE-8AF0FCF28D3B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CryptoTradingBot.Application", "CryptoTradingBot.Application\CryptoTradingBot.Application.csproj", "{BB823074-C2C2-467F-AF7A-4F9BF9A8EBD3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryptoTradingBot.Presentation.ConsoleApp", "CryptoTradingBot.Presentation.ConsoleApp\CryptoTradingBot.Presentation.ConsoleApp.csproj", "{B7E9FA9E-A9BC-4C0B-B652-8DEAF179BCFA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryptoTradingBot.Presentation.DesktopApp", "CryptoTradingBot.Presentation.DesktopApp\CryptoTradingBot.Presentation.DesktopApp.csproj", "{321E02BC-18EA-4F88-A18E-CDC055D15816}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{31CCAD79-51C5-41CD-B024-08423CBE924F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31CCAD79-51C5-41CD-B024-08423CBE924F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31CCAD79-51C5-41CD-B024-08423CBE924F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31CCAD79-51C5-41CD-B024-08423CBE924F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7ADE8620-CB7F-4A23-A943-F8C6A9E3AA59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7ADE8620-CB7F-4A23-A943-F8C6A9E3AA59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7ADE8620-CB7F-4A23-A943-F8C6A9E3AA59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7ADE8620-CB7F-4A23-A943-F8C6A9E3AA59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78ADFF8C-9EA8-4CB3-B070-7182C890BBCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78ADFF8C-9EA8-4CB3-B070-7182C890BBCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78ADFF8C-9EA8-4CB3-B070-7182C890BBCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78ADFF8C-9EA8-4CB3-B070-7182C890BBCB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E34B093-239E-4D38-93F1-BA9D7993E828}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E34B093-239E-4D38-93F1-BA9D7993E828}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E34B093-239E-4D38-93F1-BA9D7993E828}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E34B093-239E-4D38-93F1-BA9D7993E828}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F58A9F80-7773-4B6B-85AE-8AF0FCF28D3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F58A9F80-7773-4B6B-85AE-8AF0FCF28D3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F58A9F80-7773-4B6B-85AE-8AF0FCF28D3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F58A9F80-7773-4B6B-85AE-8AF0FCF28D3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB823074-C2C2-467F-AF7A-4F9BF9A8EBD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB823074-C2C2-467F-AF7A-4F9BF9A8EBD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB823074-C2C2-467F-AF7A-4F9BF9A8EBD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB823074-C2C2-467F-AF7A-4F9BF9A8EBD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7E9FA9E-A9BC-4C0B-B652-8DEAF179BCFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7E9FA9E-A9BC-4C0B-B652-8DEAF179BCFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7E9FA9E-A9BC-4C0B-B652-8DEAF179BCFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7E9FA9E-A9BC-4C0B-B652-8DEAF179BCFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{321E02BC-18EA-4F88-A18E-CDC055D15816}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{321E02BC-18EA-4F88-A18E-CDC055D15816}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{321E02BC-18EA-4F88-A18E-CDC055D15816}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{321E02BC-18EA-4F88-A18E-CDC055D15816}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{78ADFF8C-9EA8-4CB3-B070-7182C890BBCB} = {95CE56B1-21FF-4102-82FA-ABD1EA932935}
+		{1E34B093-239E-4D38-93F1-BA9D7993E828} = {95CE56B1-21FF-4102-82FA-ABD1EA932935}
+		{F58A9F80-7773-4B6B-85AE-8AF0FCF28D3B} = {95CE56B1-21FF-4102-82FA-ABD1EA932935}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {41774EC8-3F8D-4112-B42A-CC99ECF0C1EE}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,32 @@
+Notes
+https://www.binance.com/en/support/faq/how-to-test-my-functions-on-binance-testnet-ab78f9a1b8824cf0a106b4229c76496d
+https://developers.binance.com/docs/binance-spot-api-docs
+https://binance-docs.github.io/apidocs/spot/en
+https://testnet.binance.vision/
+
+
+
+
+Spot API URLs							| Spot Test Network URLs
+https://api.binance.com/api				| https://testnet.binance.vision/api
+https://api-gcp.binance.com/api			| 
+https://api1.binance.com/api			| 
+https://api2.binance.com/api			| 
+https://api3.binance.com/api			| 
+https://api4.binance.com/api			| 
+---------------------------------------	| ---------------------------------------
+wss://ws-api.binance.com/ws-api/v3		| wss://ws-api.testnet.binance.vision/ws-api/v3
+wss://ws-api.binance.com:9443/ws-api/v3	| wss://ws-api.testnet.binance.vision:9443/ws-api/v3
+---------------------------------------	| ---------------------------------------
+wss://stream.binance.com/ws				| wss://stream.testnet.binance.vision/ws
+wss://stream.binance.com:9443/ws		| wss://stream.testnet.binance.vision:9443/ws
+---------------------------------------	| ---------------------------------------
+wss://stream.binance.com/stream			| wss://stream.testnet.binance.vision/stream
+wss://stream.binance.com:9443/stream	| wss://stream.testnet.binance.vision:9443/stream
+---------------------------------------	| ---------------------------------------
+tcp+tls://fix-oe.binance.com:9000		| tcp+tls://fix-oe.testnet.binance.vision:9000
+---------------------------------------	| ---------------------------------------
+tcp+tls://fix-dc.binance.com:9000		| tcp+tls://fix-dc.testnet.binance.vision:9000
+---------------------------------------	| ---------------------------------------
+N/A										| tcp+tls://fix-md.testnet.binance.vision:9000
+---------------------------------------	| ---------------------------------------
