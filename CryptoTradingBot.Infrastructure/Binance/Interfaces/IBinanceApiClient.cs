@@ -8,8 +8,13 @@ namespace CryptoTradingBot.Infrastructure.Binance.Interfaces
 {
     public interface IBinanceApiClient
     {
-        Task<string> GetAccountInformationAsync();
-        Task<string> PlaceOrderAsync(string symbol, decimal quantity, decimal price);
+        //Task<string> GetAccountInformationAsync();
+        //Task<string> PlaceOrderAsync(string symbol, decimal quantity, decimal price);
         // Add more methods as needed
+    }
+
+    public interface IBinanceSpotApiClientBase
+    { 
+    
     }
 }

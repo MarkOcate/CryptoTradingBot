@@ -17,6 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Binance\Models\" />
     <Folder Include="Database\Scripts\" />
   </ItemGroup>
 

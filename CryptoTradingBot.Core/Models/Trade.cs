@@ -1,18 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Reflection;
 
-namespace CryptoTradingBot.Infrastructure.Database.Models
+namespace CryptoTradingBot.Core.Models
 {
     public class Trade
     {
         public int Id { get; set; }
-        public string Symbol { get; set; }
-        public decimal Quantity { get; set; }
         public decimal Price { get; set; }
-        public string TradeType { get; set; } // e.g., Buy or Sell
-        public DateTime TradeDate { get; set; }
+        public decimal qty { get; set; }
+        public decimal quoteQty { get; set; }
+        public DateTime time { get; set; }
+        public bool isBuyerMaker { get; set; }
+        public bool isBestMatch { get; set; }
     }
 }

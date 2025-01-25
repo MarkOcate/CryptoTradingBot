@@ -1,7 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using CryptoTradingBot.Core.Interfaces;
 using CryptoTradingBot.Infrastructure.Logging;
-using CryptoTradingBot.Infrastructure.Database.Models;
 using CryptoTradingBot.Infrastructure.Database.Repositories;
 using CryptoTradingBot.Infrastructure.Database.Services;
 using CryptoTradingBot.Infrastructure.Binance.Services;
@@ -9,6 +8,7 @@ using CryptoTradingBot.Infrastructure.Binance.Clients;
 using CryptoTradingBot.Infrastructure.Binance.Interfaces;
 using CryptoTradingBot.Infrastructure.Interfaces;
 using CryptoTradingBot.Application.Services;
+using CryptoTradingBot.Core.Models;
 
 
 namespace CryptoTradingBot.Infrastructure.DI
@@ -26,7 +26,7 @@ namespace CryptoTradingBot.Infrastructure.DI
 
             // Register configuration service
             services.AddSingleton<BinanceConfigurationService>();
-            services.AddHttpClient<IBinanceApiClient, BinanceApiClient>();
+            services.AddHttpClient<IBinanceApiClient, BinanceSpotApiClient>();
             services.AddHttpClient<IBinanceMarketDataClient, BinanceMarketDataClient>();
 
             services.AddTransient<MarketDataService>();

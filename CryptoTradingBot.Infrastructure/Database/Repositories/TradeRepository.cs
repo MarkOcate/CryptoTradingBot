@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Dapper;
-using CryptoTradingBot.Infrastructure.Database.Models;
 using CryptoTradingBot.Core.Interfaces;
+using CryptoTradingBot.Core.Models;
 
 namespace CryptoTradingBot.Infrastructure.Database.Repositories
 {

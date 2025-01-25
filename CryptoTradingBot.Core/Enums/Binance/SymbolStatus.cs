@@ -6,13 +6,12 @@
     /// </summary>
     public enum SymbolStatus
     {
-        PreTrading,
-        Trading,
-        PostTrading,
-        EndOfDay,
-        Halt,
-        AuctionMatch,
-        Break
+        PRE_TRADING,
+        TRADING,
+        POST_TRADING,
+        END_OF_DAY,
+        HALT,
+        AUCTION_MATCH,
+        BREAK
     }
-
 }
